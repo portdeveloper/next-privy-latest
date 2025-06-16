@@ -29,22 +29,19 @@ export default function SendTransactionComponent() {
   };
 
   if (!authenticated) {
-    return <div style={{ marginBottom: '20px' }}>Please log in first</div>;
+    return <div className="mb-5">Please log in first</div>;
   }
 
   return (
-    <div style={{ marginBottom: '20px' }}>
+    <div className="mb-5">
       <button 
         onClick={handleSendTransaction} 
         disabled={isLoading}
-        style={{ 
-          padding: '8px 16px', 
-          border: '1px solid #ccc', 
-          borderRadius: '4px', 
-          backgroundColor: isLoading ? '#e0e0e0' : '#f5f5f5',
-          cursor: isLoading ? 'not-allowed' : 'pointer',
-          opacity: isLoading ? 0.6 : 1
-        }}
+        className={`px-4 py-2 border border-gray-300 rounded transition-all duration-200 ${
+          isLoading 
+            ? 'bg-gray-200 cursor-not-allowed opacity-60' 
+            : 'bg-gray-100 hover:bg-gray-200 cursor-pointer'
+        }`}
       >
         {isLoading ? "Sending..." : "Send 0.0001 MON"}
       </button>
