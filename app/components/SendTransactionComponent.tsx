@@ -46,7 +46,7 @@ export default function SendTransactionComponent() {
           opacity: isLoading ? 0.6 : 1
         }}
       >
-        {isLoading ? "Sending..." : "Send 0.0001 ETH"}
+        {isLoading ? "Sending..." : "Send 0.0001 MON"}
       </button>
     </div>
   );
