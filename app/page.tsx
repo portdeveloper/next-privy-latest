@@ -12,13 +12,13 @@ export default function Home() {
   }
 
   return (
-    <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
-      <h1 style={{ marginBottom: '30px' }}>Privy Demo</h1>
+    <div className="p-5 font-sans">
+      <h1 className="mb-8">Privy Demo</h1>
       
-      <h2 style={{ marginBottom: '15px' }}>Login</h2>
+      <h2 className="mb-4">Login</h2>
       <LoginComponent />
       
-      <h2 style={{ marginBottom: '15px' }}>Send Transaction</h2>
+      <h2 className="mb-4">Send Transaction</h2>
       <SendTransactionComponent />
     </div>
   );

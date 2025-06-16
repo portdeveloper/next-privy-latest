@@ -13,17 +13,11 @@ export default function LoginComponent() {
 
   if (authenticated) {
     return (
-      <div style={{ marginBottom: '20px' }}>
-        <p style={{ marginBottom: '10px' }}>Logged in: {user?.wallet?.address}</p>
+      <div className="mb-5">
+        <p className="mb-2.5">Logged in: {user?.wallet?.address}</p>
         <button 
           onClick={logout}
-          style={{ 
-            padding: '8px 16px', 
-            border: '1px solid #ccc', 
-            borderRadius: '4px', 
-            backgroundColor: '#f5f5f5',
-            cursor: 'pointer'
-          }}
+          className="px-4 py-2 border border-gray-300 rounded bg-gray-100 cursor-pointer hover:bg-gray-200"
         >
           Logout
         </button>
@@ -32,16 +26,10 @@ export default function LoginComponent() {
   }
 
   return (
-    <div style={{ marginBottom: '20px' }}>
+    <div className="mb-5">
       <button 
         onClick={() => login()}
-        style={{ 
-          padding: '8px 16px', 
-          border: '1px solid #ccc', 
-          borderRadius: '4px', 
-          backgroundColor: '#f5f5f5',
-          cursor: 'pointer'
-        }}
+        className="px-4 py-2 border border-gray-300 rounded bg-gray-100 cursor-pointer hover:bg-gray-200"
       >
         Login
       </button>
